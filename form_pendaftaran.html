@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Form Pendaftaran</title>
+    <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+<style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+    }
+</style>
+<div id="content">
+    <form action="proses_pendaftaran.php" target="_blank" method="post">
+        <table>
+            <tr>
+                <td><label for="nim">Nim</label></td>
+                <td><input type="text" id="nim" name="nim" required></td>
+            </tr>
+            <tr>
+                <td><label for="nama">Nama lengkap</label></td>
+                <td><input type="text" id="nama" name="nama" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">E-mail</label></td>
+                <td><input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required></td>
+            </tr>
+            <tr>
+                <td><label for="tgl">Tempat, Tanggal Lahir</label></td>
+                <td>
+                    <input type="text" id="tempat_lahir" name="tempat_lahir" required placeholder="Tempat Lahir">
+                    <input type="date" id="tgl" name="tanggal" required>
+                </td>
+            </tr>            
+            <tr>
+                <td><label for="rumah">Alamat</label></td>
+                <td><textarea name="alamatrumah" id="rumah" cols="40" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="jk">Gender</label></td>
+                <td>
+                    <input type="radio" id="laki-laki" name="jenis_kelamin" value="laki-laki" class="gender-checkbox" />
+                    <label for="laki-laki">Laki-laki</label>
+                    <input type="radio" id="perempuan" name="jenis_kelamin" value="perempuan" class="gender-checkbox" />
+                    <label for="perempuan">Perempuan</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Kirim"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
